@@ -12,6 +12,13 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    //Gravatar头像
+    public function gravatar($size='100')
+    {
+        $hash = md5(strtolower(trim($this->attributes['email'])));
+        return "gravatar.loli.net/avatar//$hash?s=$size";
+    }
+
     /**
      * The attributes that are mass assignable.
      *
