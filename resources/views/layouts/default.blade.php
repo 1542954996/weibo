@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title','Weibo App') - Laravel 新手入门教程</title>
+    <title>@yield('title','Weibo App') - Laravel  新手入门教程</title>
+    @vite(['resources/js/app.js'])
 </head>
 <body>
-    @yield('content')
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Weibo App</a>
+            <ul class ="navbar-nav justify-content-end">
+                <li class ="nav-item"><a class="nav-link" href="/help">帮助</a></li>
+                <li class ="nav-item"><a class="nav-link" href="#">登录</a></li>
+            </ui>   
+        </div>
+    </nav>
+
+    <div class="container">
+        @yield('content')
+    </div>
 </body>
 </html>
