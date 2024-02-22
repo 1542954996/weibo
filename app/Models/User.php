@@ -94,7 +94,7 @@ class User extends Authenticatable
         if(!is_array($user_ids)){
             $user_ids = compact('user_ids');
         }
-        $this->following()->detach('$user_ids');
+        $this->followings()->detach($user_ids);
     }
 
     public function isFollowing($user_id)
